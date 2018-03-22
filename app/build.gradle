@@ -22,14 +22,23 @@ android {
     }
 }
 
+
+repositories {
+    jcenter()
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.xw.repo:bubbleseekbar:3.16-lite'
     compile 'com.github.kittinunf.fuel:fuel-android:1.12.1'
     compile 'com.github.kittinunf.fuel:fuel-gson:1.12.1'
+    compile 'com.github.kittinunf.fuel:fuel-moshi:1.12.1'
+    compile 'com.squareup.moshi:moshi:1.5.0'
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.beust:klaxon:2.1.13'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
