@@ -35,9 +35,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        genderGroup.setOnCheckedChangeListener { group, checkedId ->
+            println(checkedId)
+        }
+
         getGiftIdeasBtn.setOnClickListener {
-            val intent = Intent(this, IdeaActivity::class.java)
-            startActivity(intent)
+
+//            val intent = Intent(this, IdeaActivity::class.java)
+//            startActivity(intent)
         }
     }
 }
