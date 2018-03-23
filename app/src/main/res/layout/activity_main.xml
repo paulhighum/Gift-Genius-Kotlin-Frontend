@@ -15,13 +15,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="Recipients Gender:"
-        android:textSize="18sp"
         android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/recipientsAgeTxt"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appLogo"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintTop_toBottomOf="@+id/giftGeniusLogo" />
 
     <RadioGroup
         android:id="@+id/genderGroup"
@@ -35,8 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toEndOf="@+id/recipientsGenderTxt"
-        app:layout_constraintTop_toBottomOf="@+id/appLogo"
-        app:layout_constraintVertical_bias="0.789">
+        app:layout_constraintTop_toBottomOf="@+id/giftGeniusLogo">
 
         <RadioButton
             android:id="@+id/M"
@@ -44,8 +42,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="M"
-            android:textSize="18sp"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/F"
@@ -53,8 +51,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="F"
-            android:textSize="18sp"
-            android:textColor="@color/colorPrimaryDark" />
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/O"
@@ -62,8 +60,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="O"
-            android:textSize="18sp"
-            android:textColor="@color/colorPrimaryDark" />
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
     </RadioGroup>
 
     <TextView
@@ -86,6 +84,7 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="number"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toTopOf="@+id/lengthOfRelationshipTxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -146,12 +145,12 @@
         android:id="@+id/relationshipTypeTxt"
         android:layout_width="159dp"
         android:layout_height="30dp"
-        android:layout_marginBottom="172dp"
+        android:layout_marginBottom="32dp"
         android:layout_marginStart="16dp"
         android:text="Relationship Type:"
-        android:textSize="18sp"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/getGiftIdeasBtn"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/giftOccasionTxt"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -165,22 +164,49 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toTopOf="@+id/getGiftIdeasBtn"
+        app:layout_constraintBottom_toTopOf="@+id/inputGiftOccasion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/relationshipTypeTxt"
-        app:layout_constraintTop_toBottomOf="@+id/bubbleSeekBar"
-        app:layout_constraintVertical_bias="0.004" />
+        app:layout_constraintTop_toBottomOf="@+id/bubbleSeekBar" />
 
     <ImageView
-        android:id="@+id/appLogo"
-        android:layout_width="248dp"
-        android:layout_height="98dp"
+        android:id="@+id/giftGeniusLogo"
+        android:layout_width="174dp"
+        android:layout_height="112dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/ggl" />
+
+    <TextView
+        android:id="@+id/giftOccasionTxt"
+        android:layout_width="123dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="96dp"
+        android:layout_marginStart="16dp"
+        android:text="Gift Occasion:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/getGiftIdeasBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/inputGiftOccasion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="96dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/getGiftIdeasBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintStart_toEndOf="@+id/giftOccasionTxt" />
 
 </android.support.constraint.ConstraintLayout>
