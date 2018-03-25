@@ -11,9 +11,13 @@ class IdeaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_idea)
 
         val age = intent.getIntExtra("age", 0)
+        val relationshipLength = intent.getIntExtra("relationshipLength", 0)
+        val gender = intent.getStringExtra("gender")
+        val relationshipType = intent.getStringExtra("relationshipType")
+        val occasion = intent.getStringExtra("occasion")
 
-        testBtn.setOnClickListener {
-            println(age)
-        }
+
+        println("${age}, ${relationshipLength}, ${gender}, ${relationshipType}, ${occasion}")
+
     }
 }
