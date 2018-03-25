@@ -13,6 +13,9 @@ import com.google.gson.Gson
 class MainActivity : AppCompatActivity() {
     val URL: String = "https://gift-genie-ideas.herokuapp.com/"
 
+    var gender: String = ""
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -36,13 +39,29 @@ class MainActivity : AppCompatActivity() {
         }
 
         genderGroup.setOnCheckedChangeListener { group, checkedId ->
-            println(checkedId)
+            if (M.isChecked){
+                gender = "Male"
+            }
+            if (F.isChecked){
+                gender = "Female"
+            }
+            if (O.isChecked){
+                gender = "Other"
+            }
         }
 
         getGiftIdeasBtn.setOnClickListener {
-
-//            val intent = Intent(this, IdeaActivity::class.java)
-//            startActivity(intent)
+            var age = inputAge.text.toString().toIntOrNull()
+            var relationshipLength = bubbleSeekBar.progress
+            var occasion = inputGiftOccasion.text.toString()
+            var relatonshipType = inputRelationshipType.text.toString()
+            val intent = Intent(this, IdeaActivity::class.java)
+            intent.putExtra("gender", gender)
+            intent.putExtra("age", age)
+            intent.putExtra("relationshipLength", relationshipLength)
+            intent.putExtra("occasion", occasion)
+            intent.putExtra("relationshipType", relatonshipType)
+            startActivity(intent)
         }
     }
 }
