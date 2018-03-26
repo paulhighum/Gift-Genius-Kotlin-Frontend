@@ -30,9 +30,10 @@ class IdeaActivity : AppCompatActivity() {
                         if(idea.minRelationshipLength < relationshipLength && idea.maxRelationshipLength > relationshipLength){
                             if(idea.occasion.toLowerCase() == occasion.toLowerCase() || idea.occasion == "Any"){
                                 if(idea.relationshipType.toLowerCase() == relationshipType.toLowerCase() || idea.relationshipType == "Any"){
-                                    val ideaDynamic = TextView(this)
+                                    var ideaDynamic = TextView(this)
                                     ideaDynamic.textSize = 24f
                                     ideaDynamic.text = idea.idea
+                                    ideaDynamic.setPadding(32, 16, 0, 0)
                                     llMain.addView(ideaDynamic)
                                 }
                             }
