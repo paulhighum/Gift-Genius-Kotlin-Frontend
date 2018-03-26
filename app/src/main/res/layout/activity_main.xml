@@ -36,7 +36,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/recipientsGenderTxt"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.704">
+        app:layout_constraintVertical_bias="0.774">
 
         <RadioButton
             android:id="@+id/M"
@@ -82,7 +82,7 @@
         android:id="@+id/inputAge"
         android:layout_width="75dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="24dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="number"
@@ -169,25 +169,25 @@
         android:id="@+id/giftOccasionTxt"
         android:layout_width="123dp"
         android:layout_height="32dp"
-        android:layout_marginBottom="196dp"
+        android:layout_marginBottom="24dp"
         android:layout_marginStart="16dp"
         android:text="Gift Occasion:"
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/getGiftIdeasBtn"
+        app:layout_constraintBottom_toTopOf="@+id/priceTxt"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/inputGiftOccasion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="196dp"
+        android:layout_marginBottom="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toTopOf="@+id/getGiftIdeasBtn"
+        app:layout_constraintBottom_toTopOf="@+id/priceGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/giftOccasionTxt" />
@@ -204,5 +204,67 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/priceTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="116dp"
+        android:layout_marginStart="16dp"
+        android:text="Price:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/getGiftIdeasBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/priceGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="108dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation='horizontal'
+        app:layout_constraintBottom_toTopOf="@+id/getGiftIdeasBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintStart_toEndOf="@+id/priceTxt">
+
+        <RadioButton
+            android:id="@+id/$"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="$"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/$$"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="$$"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/$$$"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="$$$"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/$$$$"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="$$$$"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
+    </RadioGroup>
 
 </android.support.constraint.ConstraintLayout>
