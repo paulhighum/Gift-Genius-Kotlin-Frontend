@@ -12,7 +12,7 @@ class IdeaActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_idea)
+        setContentView(R.layout.new_activity_idea)
 
         val age = intent.getIntExtra("age", 0)
         val relationshipLength = intent.getIntExtra("relationshipLength", 0)
@@ -28,8 +28,8 @@ class IdeaActivity : AppCompatActivity() {
                 if(idea.gender == gender || idea.gender == "Any"){
                     if(idea.minAge < age){
                         if(idea.minRelationshipLength < relationshipLength && idea.maxRelationshipLength > relationshipLength){
-                            if(idea.occasion == occasion || idea.occasion == "Any"){
-                                if(idea.relationshipType == relationshipType || idea.relationshipType == "Any"){
+                            if(idea.occasion.toLowerCase() == occasion.toLowerCase() || idea.occasion == "Any"){
+                                if(idea.relationshipType.toLowerCase() == relationshipType.toLowerCase() || idea.relationshipType == "Any"){
                                     val ideaDynamic = TextView(this)
                                     ideaDynamic.textSize = 24f
                                     ideaDynamic.text = idea.idea

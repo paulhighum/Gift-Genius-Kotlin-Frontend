@@ -6,24 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.paulmhighum.giftgenius.MainActivity">
 
-    <ImageView
-        android:id="@+id/giftGeniusLogo"
-        android:layout_width="174dp"
-        android:layout_height="112dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="giftGeniusLogo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ggl" />
-
     <TextView
         android:id="@+id/recipientsGenderTxt"
         android:layout_width="156dp"
         android:layout_height="27dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="24dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
@@ -33,7 +20,8 @@
         app:layout_constraintBottom_toTopOf="@+id/recipientsAgeTxt"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/giftGeniusLogo" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.904" />
 
     <RadioGroup
         android:id="@+id/genderGroup"
@@ -45,9 +33,10 @@
         android:orientation='horizontal'
         app:layout_constraintBottom_toTopOf="@+id/inputAge"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/recipientsGenderTxt"
-        app:layout_constraintTop_toBottomOf="@+id/giftGeniusLogo">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.704">
 
         <RadioButton
             android:id="@+id/M"
@@ -81,11 +70,11 @@
         android:id="@+id/recipientsAgeTxt"
         android:layout_width="136dp"
         android:layout_height="36dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="24dp"
         android:layout_marginStart="16dp"
         android:text="Recipients Age:"
-        android:textSize="18sp"
         android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/lengthOfRelationshipTxt"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -123,6 +112,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         app:bsb_bubble_color="@color/colorAccent"
         app:bsb_bubble_text_color="@android:color/white"
         app:bsb_max="50.0"
@@ -166,15 +157,16 @@
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toTopOf="@+id/inputGiftOccasion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/relationshipTypeTxt"
-        app:layout_constraintTop_toBottomOf="@+id/bubbleSeekBar" />
+        app:layout_constraintTop_toBottomOf="@+id/bubbleSeekBar"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/giftOccasionTxt"
         android:layout_width="123dp"
         android:layout_height="32dp"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="196dp"
         android:layout_marginStart="16dp"
         android:text="Gift Occasion:"
         android:textColor="@color/colorPrimary"
@@ -186,7 +178,7 @@
         android:id="@+id/inputGiftOccasion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="196dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:ems="10"
@@ -194,7 +186,7 @@
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toTopOf="@+id/getGiftIdeasBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/giftOccasionTxt" />
 
     <Button
