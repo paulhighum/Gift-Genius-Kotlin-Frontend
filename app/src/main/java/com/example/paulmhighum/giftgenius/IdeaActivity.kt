@@ -8,6 +8,11 @@ import com.github.kittinunf.fuel.httpGet
 import android.widget.TextView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 class IdeaActivity : AppCompatActivity() {
 
@@ -23,7 +28,9 @@ class IdeaActivity : AppCompatActivity() {
         val relationshipType = intent.getStringExtra("relationshipType")
         val occasion = intent.getStringExtra("occasion")
 
-        val llMain = findViewById<LinearLayout>(R.id.ll_main_layout) as LinearLayout
+        val listView = findViewById<ListView>(R.id.listv) as ListView
+        val stringArrayList = ArrayList<String>()
+
 
         URL.httpGet().responseObject(Idea.Deserializer()){request, response, result ->
             val (ideas, err) = result
@@ -33,14 +40,17 @@ class IdeaActivity : AppCompatActivity() {
                         if(idea.minRelationshipLength < relationshipLength && idea.maxRelationshipLength > relationshipLength){
                             if(idea.occasion.toLowerCase() == occasion.toLowerCase() || idea.occasion == "Any"){
                                 if(idea.relationshipType.toLowerCase() == relationshipType.toLowerCase() || idea.relationshipType == "Any"){
-                                    var ideaDynamic = TextView(this)
-                                    ideaDynamic.textSize = 32f
-                                    ideaDynamic.text = idea.idea
-                                    ideaDynamic.setTextColor(Color.parseColor("#263248"))
-                                    ideaDynamic.setPadding(0, 0, 0, 0)
-                                    llMain.addView(ideaDynamic)
-                                    var param = ideaDynamic.layoutParams as LinearLayout.LayoutParams
-                                    param.setMargins(80, 32, 0, 0)
+//                                    var ideaDynamic = TextView(this)
+//                                    ideaDynamic.textSize = 32f
+//                                    ideaDynamic.text = idea.idea
+//                                    ideaDynamic.setTextColor(Color.parseColor("#263248"))
+//                                    ideaDynamic.setPadding(0, 0, 0, 0)
+//                                    llMain.addView(ideaDynamic)
+//                                    var param = ideaDynamic.layoutParams as LinearLayout.LayoutParams
+//                                    param.setMargins(80, 32, 0, 0)
+                                    stringArrayList.add("  ${idea.idea}")
+                                    val listAdapter = ArrayAdapter(this, R.layout.list_row, stringArrayList)
+                                    listView.adapter = listAdapter
                                 }
                             }
                         }
