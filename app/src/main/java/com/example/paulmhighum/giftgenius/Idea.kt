@@ -8,7 +8,7 @@ package com.example.paulmhighum.giftgenius
 import com.github.kittinunf.fuel.core.ResponseDeserializable
 import com.google.gson.Gson
 
-data class Idea(var id: Int, var idea: String, var occasion: String, var gender: String, var minAge: Int, var maxAge: Int, var minRelationshipLength: Int, var maxRelationshipLength: Int, var relationshipType: String) {
+data class Idea(var id: Int, var idea: String, var occasion: String, var gender: String, var minAge: Int, var maxAge: Int, var minRelationshipLength: Int, var maxRelationshipLength: Int, var relationshipType: String, var price: Int) {
 
 
     class Deserializer: ResponseDeserializable<Array<Idea>>{

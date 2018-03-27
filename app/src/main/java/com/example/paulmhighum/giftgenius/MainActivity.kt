@@ -27,6 +27,30 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        var price: Int = 0
+
+        priceGroup.setOnCheckedChangeListener{ group, checkedId ->
+            if(lowPrice.isChecked){
+               price = 1
+            }
+
+            if(midLowPrice.isChecked){
+                price = 2
+            }
+
+            if(highMidPrice.isChecked){
+                price = 3
+            }
+
+            if(highPrice.isChecked){
+                price = 4
+            }
+
+            if(anyPrice.isChecked){
+                price = 0
+            }
+        }
+
         getGiftIdeasBtn.setOnClickListener {
             var age = inputAge.text.toString().toIntOrNull()
             var relationshipLength = bubbleSeekBar.progress
@@ -38,6 +62,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("relationshipLength", relationshipLength)
             intent.putExtra("occasion", occasion)
             intent.putExtra("relationshipType", relatonshipType)
+            intent.putExtra("price", price)
             startActivity(intent)
         }
     }

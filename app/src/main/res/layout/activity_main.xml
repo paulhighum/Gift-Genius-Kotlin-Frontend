@@ -231,7 +231,7 @@
         app:layout_constraintStart_toEndOf="@+id/priceTxt">
 
         <RadioButton
-            android:id="@+id/$"
+            android:id="@+id/lowPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -240,7 +240,7 @@
             android:textSize="18sp" />
 
         <RadioButton
-            android:id="@+id/$$"
+            android:id="@+id/midLowPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -249,7 +249,7 @@
             android:textSize="18sp" />
 
         <RadioButton
-            android:id="@+id/$$$"
+            android:id="@+id/highMidPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -258,13 +258,22 @@
             android:textSize="18sp" />
 
         <RadioButton
-            android:id="@+id/$$$$"
+            android:id="@+id/highPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="$$$$"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/anyPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Any"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"/>
     </RadioGroup>
 
 </android.support.constraint.ConstraintLayout>

@@ -27,6 +27,7 @@ class IdeaActivity : AppCompatActivity() {
         val gender = intent.getStringExtra("gender")
         val relationshipType = intent.getStringExtra("relationshipType")
         val occasion = intent.getStringExtra("occasion")
+        val price = intent.getIntExtra("price", 0)
 
         val listView = findViewById<ListView>(R.id.listv) as ListView
         val stringArrayList = ArrayList<String>()
@@ -40,17 +41,11 @@ class IdeaActivity : AppCompatActivity() {
                         if(idea.minRelationshipLength < relationshipLength && idea.maxRelationshipLength > relationshipLength){
                             if(idea.occasion.toLowerCase() == occasion.toLowerCase() || idea.occasion == "Any"){
                                 if(idea.relationshipType.toLowerCase() == relationshipType.toLowerCase() || idea.relationshipType == "Any"){
-//                                    var ideaDynamic = TextView(this)
-//                                    ideaDynamic.textSize = 32f
-//                                    ideaDynamic.text = idea.idea
-//                                    ideaDynamic.setTextColor(Color.parseColor("#263248"))
-//                                    ideaDynamic.setPadding(0, 0, 0, 0)
-//                                    llMain.addView(ideaDynamic)
-//                                    var param = ideaDynamic.layoutParams as LinearLayout.LayoutParams
-//                                    param.setMargins(80, 32, 0, 0)
-                                    stringArrayList.add("  ${idea.idea}")
-                                    val listAdapter = ArrayAdapter(this, R.layout.list_row, stringArrayList)
-                                    listView.adapter = listAdapter
+                                    if(idea.price == price || idea.price == 0 || price == 0){
+                                        stringArrayList.add("  ${idea.idea}")
+                                        val listAdapter = ArrayAdapter(this, R.layout.list_row, stringArrayList)
+                                        listView.adapter = listAdapter
+                                    }
                                 }
                             }
                         }
