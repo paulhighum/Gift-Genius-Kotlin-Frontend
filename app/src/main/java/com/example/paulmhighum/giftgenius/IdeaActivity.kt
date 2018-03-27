@@ -1,10 +1,13 @@
 package com.example.paulmhighum.giftgenius
 
+import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.ViewGroup
 import com.github.kittinunf.fuel.httpGet
 import android.widget.TextView
 import android.widget.LinearLayout
+import android.widget.RelativeLayout
 
 class IdeaActivity : AppCompatActivity() {
 
@@ -31,10 +34,13 @@ class IdeaActivity : AppCompatActivity() {
                             if(idea.occasion.toLowerCase() == occasion.toLowerCase() || idea.occasion == "Any"){
                                 if(idea.relationshipType.toLowerCase() == relationshipType.toLowerCase() || idea.relationshipType == "Any"){
                                     var ideaDynamic = TextView(this)
-                                    ideaDynamic.textSize = 24f
+                                    ideaDynamic.textSize = 32f
                                     ideaDynamic.text = idea.idea
-                                    ideaDynamic.setPadding(32, 16, 0, 0)
+                                    ideaDynamic.setTextColor(Color.parseColor("#263248"))
+                                    ideaDynamic.setPadding(0, 0, 0, 0)
                                     llMain.addView(ideaDynamic)
+                                    var param = ideaDynamic.layoutParams as LinearLayout.LayoutParams
+                                    param.setMargins(80, 32, 0, 0)
                                 }
                             }
                         }
