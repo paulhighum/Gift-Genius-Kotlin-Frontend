@@ -37,7 +37,7 @@ class IdeaActivity : AppCompatActivity() {
             val (ideas, err) = result
             ideas?.forEach{idea ->
                 if(idea.gender == gender || idea.gender == "Any"){
-                    if(idea.minAge < age){
+                    if(idea.minAge < age && idea.maxAge > age){
                         if(idea.minRelationshipLength < relationshipLength && idea.maxRelationshipLength > relationshipLength){
                             if(idea.occasion.toLowerCase() == occasion.toLowerCase() || idea.occasion == "Any"){
                                 if(idea.relationshipType.toLowerCase() == relationshipType.toLowerCase() || idea.relationshipType == "Any"){
