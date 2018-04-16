@@ -8,7 +8,7 @@ A Kotlin Android app that recommends gifts. Users select a number of filters in 
 
 
 ## User Experience
-User downloads this native app to their Android smart phone and then opens it. User is then confronted by a number of filters including recipient gender, recipient age, length of relationship, type of relationship, gift occasion and price range. Once the user has selected options to those filters they can generate gift ideas. A video example is available [here](https://photos.app.goo.gl/v0cmoRXTZL1AgB9x1)
+User downloads this native app to their Android smart phone and then opens it. User is then confronted by a number of filters including recipient gender, recipient age, length of relationship, type of relationship, gift occasion and price range. Once the user has selected options to those filters they can generate gift ideas. A video example is available [here](https://photos.app.goo.gl/Zvi26CszG0IOhTA93)
 
 ## Installation Instructions
 The source code for this app is free to use. In order to use it fork and clone this repository. From there I recommend using Android Studio to hack on the app as that is what I used to make it.
